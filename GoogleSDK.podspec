@@ -15,12 +15,11 @@ Pod::Spec.new do |s|
 
   s.subspec 'GoogleOpenSource' do |gos|
     gos.version = '1.0.0'
-    gos.frameworks = [ 'GoogleOpenSource' ]
+    gos.frameworks = ['AddressBook', 'AssetsLibrary', 'Foundation', 'CoreLocation', 'CoreMotion', 'CoreGraphics', 'CoreText', 'MediaPlayer', 'Security', 'SystemConfiguration', 'UIKit' ]
     gos.vendored_frameworks = [ 'GoogleOpenSource/GoogleOpenSource.framework' ]
 
   s.subspec 'GooglePlus' do |gpp|
     gpp.dependency 'GoogleOpenSource', '~> 1.0.0'
-    gpp.frameworks = ['AddressBook', 'AssetsLibrary', 'Foundation', 'CoreLocation', 'CoreMotion', 'CoreGraphics', 'CoreText', 'MediaPlayer', 'Security', 'SystemConfiguration', 'UIKit' ]
     gpp.public_header_files = [ 'GooglePlus/GooglePlus.framework/Headers' ]
     gpp.resource = 'GooglePlus/GooglePlus.bundle'
     gpp.vendored_frameworks = [ 'GooglePlus/GooglePlus.framework' ]
@@ -28,7 +27,6 @@ Pod::Spec.new do |s|
 
   s.subspec 'GooglePlayGames' do |gpg|
     gpg.dependency 'GoogleOpenSource', '~> 1.0.0'
-    gpg.frameworks = ['AddressBook', 'AssetsLibrary', 'Foundation', 'CoreLocation', 'CoreMotion', 'CoreGraphics', 'CoreText', 'MediaPlayer', 'Security', 'SystemConfiguration', 'UIKit' ]
     gpg.public_header_files = [ 'GooglePlayGames/GooglePlayGames.framework/Headers' ]
     gpg.resource = 'GooglePlayGames/GooglePlayGames.bundle'
     gpg.vendored_frameworks = [ 'GooglePlayGames/GooglePlayGames.framework' ]
