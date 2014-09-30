@@ -25,6 +25,7 @@ Pod::Spec.new do |s|
     gpp.dependency 'GoogleSDK/GoogleOpenSource', '~> 1.0.0'
     gpp.public_header_files = 'GooglePlus/GooglePlus.framework/Headers'
     gpp.resource = 'GooglePlus/GooglePlus.bundle'
+    gpp.frameworks = 'GooglePlus'
     gpp.vendored_frameworks = 'GoogleSDK/GooglePlus/GooglePlus.framework'
   end
 
@@ -32,6 +33,7 @@ Pod::Spec.new do |s|
     gpg.dependency 'GoogleSDK/GoogleOpenSource', '~> 1.0.0'
     gpg.public_header_files = 'GooglePlayGames/GooglePlayGames.framework/Headers'
     gpg.resource = 'GooglePlayGames/GooglePlayGames.bundle'
+    gpg.frameworks = 'GooglePlayGames'
     gpg.vendored_frameworks = 'GoogleSDK/GooglePlayGames/GooglePlayGames.framework'
   end
 end
